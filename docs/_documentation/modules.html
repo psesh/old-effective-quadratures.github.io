@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Modules</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+      <link rel="shortcut icon" href="../_static/eq-logo-favicon.png"/>
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Parameter" href="parameter.html" />
+  <link rel="prev" title="About us" href="team.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="http://localhost:8080" class="home-link">
+    
+      <img class="logo" src="../_static/logo-5-black-text-lowres.png" alt="logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+  
+    <div class="nav-item">
+      <a href="/equadratures/"
+        class="nav-link">
+          Equadratures
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/eintegrator/"
+        class="nav-link">
+          Eintegrator
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/docs/_documentation/"
+        class="nav-link">
+          Documentation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/workshops/"
+        class="nav-link">
+          Workshops
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/motivation/"
+        class="nav-link">
+          Motivation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/team/"
+        class="nav-link">
+          Team
+      </a>
+    </div>
+  
+
+
+  
+    <div class="nav-item">
+      <a href="https://discourse.effective-quadratures.org/"
+        class="nav-link external" target="_blank" >
+          Discourse <outboundlink/>
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Effective-Quadratures"
+        class="nav-link external" target="_blank" >
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+  
+    <div class="nav-item">
+      <a href="/equadratures/"
+        class="nav-link">
+          Equadratures
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/eintegrator/"
+        class="nav-link">
+          Eintegrator
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/docs/_documentation/"
+        class="nav-link">
+          Documentation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/workshops/"
+        class="nav-link">
+          Workshops
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/motivation/"
+        class="nav-link">
+          Motivation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/team/"
+        class="nav-link">
+          Team
+      </a>
+    </div>
+  
+
+
+  
+    <div class="nav-item">
+      <a href="https://discourse.effective-quadratures.org/"
+        class="nav-link external" target="_blank" >
+          Discourse <outboundlink/>
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Effective-Quadratures"
+        class="nav-link external" target="_blank" >
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#sitemap">sitemap</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="introduction.html" class="reference internal ">Effective Quadratures</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="team.html" class="reference internal ">About us</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Modules</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#modules" class="reference internal">Modules</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="tutorials.html" class="reference internal ">Tutorials</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Modules</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="team.html"
+       title="previous chapter">← About us</a>
+  </li>
+  <li class="next">
+    <a href="parameter.html"
+       title="next chapter">Parameter →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<p>This page covers some of the key modules in Effective Quadratures; they are split into two parts. First we have the <strong>core building blocks</strong> to assist users in creating bespoke polynomial approximations for their data.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poly.html">Polynomial</a></li>
+</ul>
+</div>
+<p>Then we have the <strong>polynomial exploiting utilities</strong> that leverage a polynomial approximation to facilitate specific user centric tasks. These include finding dimension reducing subspaces, optimisation with polynomial surrogates, polynomial based deep learning and generating correlated sample sets.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="subspaces.html">Dimension reduction with polynomials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimisation.html">Optimisation with polynomials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polynet.html">Deep learning with polynomials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correlated.html">Correlation mapping for polynomials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polytree.html">Polynomial Regression Tree</a></li>
+</ul>
+</div>
+<span class="target" id="module-equadratures"></span></div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="team.html"
+       title="previous chapter">← About us</a>
+  </li>
+  <li class="next">
+    <a href="parameter.html"
+       title="next chapter">Parameter →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2016-2020 by Effective Quadratures.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

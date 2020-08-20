@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Solver</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+      <link rel="shortcut icon" href="../_static/eq-logo-favicon.png"/>
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="http://localhost:8080" class="home-link">
+    
+      <img class="logo" src="../_static/logo-5-black-text-lowres.png" alt="logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+  
+    <div class="nav-item">
+      <a href="/equadratures/"
+        class="nav-link">
+          Equadratures
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/eintegrator/"
+        class="nav-link">
+          Eintegrator
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/docs/_documentation/"
+        class="nav-link">
+          Documentation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/workshops/"
+        class="nav-link">
+          Workshops
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/motivation/"
+        class="nav-link">
+          Motivation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/team/"
+        class="nav-link">
+          Team
+      </a>
+    </div>
+  
+
+
+  
+    <div class="nav-item">
+      <a href="https://discourse.effective-quadratures.org/"
+        class="nav-link external" target="_blank" >
+          Discourse <outboundlink/>
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Effective-Quadratures"
+        class="nav-link external" target="_blank" >
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+  
+    <div class="nav-item">
+      <a href="/equadratures/"
+        class="nav-link">
+          Equadratures
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/eintegrator/"
+        class="nav-link">
+          Eintegrator
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/docs/_documentation/"
+        class="nav-link">
+          Documentation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/workshops/"
+        class="nav-link">
+          Workshops
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/motivation/"
+        class="nav-link">
+          Motivation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/team/"
+        class="nav-link">
+          Team
+      </a>
+    </div>
+  
+
+
+  
+    <div class="nav-item">
+      <a href="https://discourse.effective-quadratures.org/"
+        class="nav-link external" target="_blank" >
+          Discourse <outboundlink/>
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Effective-Quadratures"
+        class="nav-link external" target="_blank" >
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#sitemap">sitemap</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="introduction.html" class="reference internal ">Effective Quadratures</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="team.html" class="reference internal ">About us</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="modules.html" class="reference internal ">Modules</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="tutorials.html" class="reference internal ">Tutorials</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Solver</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="module-equadratures.solver">
+<span id="solver"></span><h1>Solver<a class="headerlink" href="#module-equadratures.solver" title="Permalink to this headline">¶</a></h1>
+<p>Solvers for computing of a linear system.</p>
+<dl class="py class">
+<dt id="equadratures.solver.Solver">
+<em class="property">class </em><code class="sig-prename descclassname">equadratures.solver.</code><code class="sig-name descname">Solver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">method</span></em>, <em class="sig-param"><span class="n">solver_args</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/solver.html#Solver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.solver.Solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns solver functions for solving Ax=b
+:param string method: The method used for solving the linear system. Options include: <code class="docutils literal notranslate"><span class="pre">compressed-sensing</span></code>, <code class="docutils literal notranslate"><span class="pre">least-squares</span></code>, <code class="docutils literal notranslate"><span class="pre">minimum-norm</span></code>, <code class="docutils literal notranslate"><span class="pre">numerical-integration</span></code>, <code class="docutils literal notranslate"><span class="pre">least-squares-with-gradients</span></code>, <code class="docutils literal notranslate"><span class="pre">least-absolute-residual</span></code>, <code class="docutils literal notranslate"><span class="pre">huber</span></code> and <code class="docutils literal notranslate"><span class="pre">elastic-net</span></code>.
+:param dict solver_args: Optional arguments centered around the specific solver.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param numpy.ndarray noise-level</dt>
+<dd class="field-odd"><p>The noise-level to be used in the basis pursuit de-noising solver.</p>
+</dd>
+<dt class="field-even">param bool verbose</dt>
+<dd class="field-even"><p>Default value of this input is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>; when <code class="docutils literal notranslate"><span class="pre">True</span></code> a string is printed to the screen detailing the solver convergence and condition number of the matrix.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="equadratures.solver.elastic_net">
+<code class="sig-prename descclassname">equadratures.solver.</code><code class="sig-name descname">elastic_net</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">verbose</span></em>, <em class="sig-param"><span class="n">lamda_val</span></em>, <em class="sig-param"><span class="n">alpha_val</span></em>, <em class="sig-param"><span class="n">opt</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/solver.html#elastic_net"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.solver.elastic_net" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves 0.5*||Ax-b||_2 + lamda*( alpha*||x||_1  + 0.5*(1-alpha)*||x||_2**2).
+Elastic net regression: L2 cost function, with mix of L1 and L2 penalties (scaled by lamda1 and lamda2).
+The penalties shrink the parameter estimates in the hopes of reducing variance, improving prediction accuracy, and aiding interpetation.
+lamda controls amount of penalisation i.e. lamda=0 gives OLS. default is 1. 
+alpha controls L1/L2 penalisation mix. alpha=0 gives ridge regression, alpha=1 gives LASSO. 
+Note, to set lamda1 and lamda 2 directly:
+lamda = lamda1 + lamda2
+alpha = lamda1 / (lamda1 + lamda2)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="equadratures.solver.huber">
+<code class="sig-prename descclassname">equadratures.solver.</code><code class="sig-name descname">huber</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">verbose</span></em>, <em class="sig-param"><span class="n">M</span></em>, <em class="sig-param"><span class="n">opt</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/solver.html#huber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.solver.huber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves Ax=b by minimising the Huber loss function. 
+Thi
+function is identical to the least squares (L2) penalty for small residuals (i.e. ||Ax-b||**2&lt;=M). 
+But on large residuals (||Ax-b||**2&gt;M), its penalty is lower (L1) and increases linearly rather than quadratically. 
+It is thus more forgiving of outliers.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="equadratures.solver.least_absolute_residual">
+<code class="sig-prename descclassname">equadratures.solver.</code><code class="sig-name descname">least_absolute_residual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">verbose</span></em>, <em class="sig-param"><span class="n">opt</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/solver.html#least_absolute_residual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.solver.least_absolute_residual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves Ax=b by minimising the L1 norm (absolute residuals).</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2016-2020 by Effective Quadratures.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Computing moments</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+      <link rel="shortcut icon" href="../_static/eq-logo-favicon.png"/>
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Multi-index sets" href="tutorial_5.html" />
+  <link rel="prev" title="Constructing orthogonal polynomials" href="tutorial_3.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="http://localhost:8080" class="home-link">
+    
+      <img class="logo" src="../_static/logo-5-black-text-lowres.png" alt="logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+  
+    <div class="nav-item">
+      <a href="/equadratures/"
+        class="nav-link">
+          Equadratures
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/eintegrator/"
+        class="nav-link">
+          Eintegrator
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/docs/_documentation/"
+        class="nav-link">
+          Documentation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/workshops/"
+        class="nav-link">
+          Workshops
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/motivation/"
+        class="nav-link">
+          Motivation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/team/"
+        class="nav-link">
+          Team
+      </a>
+    </div>
+  
+
+
+  
+    <div class="nav-item">
+      <a href="https://discourse.effective-quadratures.org/"
+        class="nav-link external" target="_blank" >
+          Discourse <outboundlink/>
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Effective-Quadratures"
+        class="nav-link external" target="_blank" >
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+  
+    <div class="nav-item">
+      <a href="/equadratures/"
+        class="nav-link">
+          Equadratures
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/eintegrator/"
+        class="nav-link">
+          Eintegrator
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/docs/_documentation/"
+        class="nav-link">
+          Documentation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/workshops/"
+        class="nav-link">
+          Workshops
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/motivation/"
+        class="nav-link">
+          Motivation
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="/team/"
+        class="nav-link">
+          Team
+      </a>
+    </div>
+  
+
+
+  
+    <div class="nav-item">
+      <a href="https://discourse.effective-quadratures.org/"
+        class="nav-link external" target="_blank" >
+          Discourse <outboundlink/>
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Effective-Quadratures"
+        class="nav-link external" target="_blank" >
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#sitemap">sitemap</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="introduction.html" class="reference internal ">Effective Quadratures</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="team.html" class="reference internal ">About us</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="modules.html" class="reference internal ">Modules</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="tutorials.html" class="reference internal ">Tutorials</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="tutorials.html">Tutorials</a> &raquo;</li>
+    
+    <li>Computing moments</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="tutorial_3.html"
+       title="previous chapter">← Constructing orthogonal polynomials</a>
+  </li>
+  <li class="next">
+    <a href="tutorial_5.html"
+       title="next chapter">Multi-index sets →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="computing-moments">
+<h1>Computing moments<a class="headerlink" href="#computing-moments" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial raises a very important question. Why bother using polynomials for estimating moments? What exactly is the advantage? Moreover, are we guaranteed that we will converge to the Monte Carlo solution? The answer is a resounding yes! Infact this is precisely what Dongbin Xiu and George Karniandakis showed in their seminal paper [1]. As always we begin with some definitions: Parameter, Poly and Basis.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">equadratures</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>For our model problem, let’s consider Rosenbrock’s function</p>
+<div class="math notranslate nohighlight">
+\[f(x_1, x_2) = (1 - x_1)^2 + 100(x_1 - x_2^2)^2,\]</div>
+<p>where we will assume that <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> are two uncertainties. We will assume that both parameters are Gaussians with <span class="math notranslate nohighlight">\(\mu=1\)</span> and <span class="math notranslate nohighlight">\(\sigma=2\)</span>. Our objective is to compute the mean and variance in the output. We start by defining our computational model</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rosenbrock_fun</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Next, we set the number of evaluation points in each direction. Lets opt for 7 points along each direction—more than sufficient to approximate the function exactly.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">variance</span> <span class="o">=</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;Gaussian&quot;</span><span class="p">,</span> <span class="n">shape_parameter_A</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">shape_parameter_B</span><span class="o">=</span><span class="n">variance</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">distribution</span><span class="o">=</span><span class="s2">&quot;Gaussian&quot;</span><span class="p">,</span> <span class="n">shape_parameter_A</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">shape_parameter_B</span><span class="o">=</span><span class="n">variance</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Now, we can set the problem up, compute the coefficients, and then ask Effective Quadratures to output the mean and the variance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">]</span>
+<span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="s1">&#39;Tensor grid&#39;</span><span class="p">)</span>
+<span class="n">uqProblem</span> <span class="o">=</span> <span class="n">Poly</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;numerical-integration&#39;</span><span class="p">)</span>
+<span class="n">uqProblem</span><span class="o">.</span><span class="n">computeCoefficients</span><span class="p">(</span><span class="n">rosenbrock_fun</span><span class="p">)</span>
+<span class="n">uqProblem</span><span class="o">.</span><span class="n">set_model</span><span class="p">(</span><span class="n">rosenbrock_fun</span><span class="p">)</span>
+<span class="n">mean</span><span class="p">,</span> <span class="n">variance</span> <span class="o">=</span> <span class="n">uqProblem</span><span class="o">.</span><span class="n">get_mean_and_variance</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">variance</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;</span> <span class="mf">6804.000000000022</span> <span class="mf">476659232.0000047</span>
+</pre></div>
+</div>
+<p>Now, we compare these results with Monte Carlo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">large_number</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">large_number</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">mu</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">large_number</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">large_number</span><span class="p">):</span>
+    <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">rosenbrock_fun</span><span class="p">([</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;</span> <span class="mf">6813.941920252046</span> <span class="mf">483131338.5544447</span>
+</pre></div>
+</div>
+<p>The results are very close! In fact the polynomial approximation results are exact, because Rosenbrock’s function is a polynomial itself!</p>
+<p>But what order should we use? This is a tough question to answer without any apriori knowledge of the function we wish to obtain statistical moments from. We defer this question to the later tutorials, but will explore the effect of the order on  accuracy. The plots below show the convergence in mean and variance with different number of samples.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/tutorial_4_fig_a.png"><img alt="../_images/tutorial_4_fig_a.png" src="../_images/tutorial_4_fig_a.png" style="width: 362.09999999999997px; height: 306.3px;" /></a>
+<p class="caption"><span class="caption-text">Figure. Comparative convergence of the mean.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/tutorial_4_fig_b.png"><img alt="../_images/tutorial_4_fig_b.png" src="../_images/tutorial_4_fig_b.png" style="width: 362.09999999999997px; height: 306.3px;" /></a>
+</div>
+<p>The full source code for this tutorial can be found <a class="reference external" href="https://github.com/Effective-Quadratures/Effective-Quadratures/blob/master/source/_documentation/codes/tutorial_4.py">here.</a></p>
+<p><strong>References</strong></p>
+<ul class="simple">
+<li><p>Xiu, D., Karniandakis, G. E., (2002). The Wiener-Askey Polynomial Chaos for Stochastic Differential Equations. SIAM Journal on Scientific Computing,  24(2), <a class="reference external" href="https://epubs.siam.org/doi/abs/10.1137/S1064827501387826?journalCode=sjoce3">Paper</a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="tutorial_3.html"
+       title="previous chapter">← Constructing orthogonal polynomials</a>
+  </li>
+  <li class="next">
+    <a href="tutorial_5.html"
+       title="next chapter">Multi-index sets →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2016-2020 by Effective Quadratures.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
