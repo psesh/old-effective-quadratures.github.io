@@ -45,30 +45,9 @@
 
   
     <div class="nav-item">
-      <a href="/equadratures/"
+      <a href="/tools/"
         class="nav-link">
-          Equadratures
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/eintegrator/"
-        class="nav-link">
-          Eintegrator
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/docs/_documentation/"
-        class="nav-link">
-          Documentation
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/workshops/"
-        class="nav-link">
-          Workshops
+          Tools
       </a>
     </div>
   
@@ -113,30 +92,9 @@
 
   
     <div class="nav-item">
-      <a href="/equadratures/"
+      <a href="/tools/"
         class="nav-link">
-          Equadratures
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/eintegrator/"
-        class="nav-link">
-          Eintegrator
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/docs/_documentation/"
-        class="nav-link">
-          Documentation
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/workshops/"
-        class="nav-link">
-          Workshops
+          Tools
       </a>
     </div>
   
@@ -238,121 +196,6 @@
             
   <div class="section" id="polynomial-regression-tree">
 <h1>Polynomial Regression Tree<a class="headerlink" href="#polynomial-regression-tree" title="Permalink to this headline">¶</a></h1>
-<span class="target" id="module-equadratures.polytree"></span><dl class="py class">
-<dt id="equadratures.polytree.PolyTree">
-<em class="property">class </em><code class="sig-prename descclassname">equadratures.polytree.</code><code class="sig-name descname">PolyTree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">splitting_criterion</span><span class="o">=</span><span class="default_value">'model_aware'</span></em>, <em class="sig-param"><span class="n">max_depth</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">min_samples_leaf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">basis</span><span class="o">=</span><span class="default_value">'total-order'</span></em>, <em class="sig-param"><span class="n">search</span><span class="o">=</span><span class="default_value">'exhaustive'</span></em>, <em class="sig-param"><span class="n">samples</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">logging</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">poly_method</span><span class="o">=</span><span class="default_value">'least-squares'</span></em>, <em class="sig-param"><span class="n">poly_solver_args</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Definition of a polynomial tree object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>splitting_criterion</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The type of splitting_criterion to use in the fit function. Options include <code class="docutils literal notranslate"><span class="pre">model_aware</span></code> which includes a model-aware split criterion and <code class="docutils literal notranslate"><span class="pre">model_agnostic</span></code> which uses a standard deviation based model-agnostic split criterion [1] and offers a substantial runtime improvement.</p></li>
-<li><p><strong>max_depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The maximum depth which the tree will grow to.</p></li>
-<li><p><strong>min_samples_leaf</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The minimum number of samples per leaf node.</p></li>
-<li><p><strong>k</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Determines the amount of smoothing to be done by <code class="docutils literal notranslate"><span class="pre">predict()</span></code>. Can be in the range of [0, inf), a value of 0 disabling smoothing.</p></li>
-<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The order of the generated orthogonal polynomials.</p></li>
-<li><p><strong>basis</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The type of index set used for the basis. Options include: <code class="docutils literal notranslate"><span class="pre">univariate</span></code>, <code class="docutils literal notranslate"><span class="pre">total-order</span></code>, <code class="docutils literal notranslate"><span class="pre">tensor-grid</span></code>, <code class="docutils literal notranslate"><span class="pre">sparse-grid</span></code> and <code class="docutils literal notranslate"><span class="pre">hyperbolic-basis</span></code></p></li>
-<li><p><strong>search</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The method of search to be used. Options are <code class="docutils literal notranslate"><span class="pre">grid</span></code> or <code class="docutils literal notranslate"><span class="pre">exhaustive</span></code>.</p></li>
-<li><p><strong>samples</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The interval between splits if <code class="docutils literal notranslate"><span class="pre">grid</span></code> search is chosen.</p></li>
-<li><p><strong>logging</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Actions saved to log.</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>Sample constructor initialisations</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">equadratures</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">tree</span> <span class="o">=</span> <span class="n">polytree</span><span class="o">.</span><span class="n">PolyTree</span><span class="p">()</span>
-
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;inputs.txt&#39;</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;outputs.txt&#39;</span><span class="p">)</span>
-
-<span class="n">tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="simple">
-<dt><strong>References</strong></dt><dd><ol class="arabic simple">
-<li><p>Wang, Y., Witten, I. H., (1997) Inducing Model Trees for Continuous Classes. In Proc. of the 9th European Conf. on Machine Learning Poster Papers. 128-137. <a class="reference external" href="https://researchcommons.waikato.ac.nz/handle/10289/1183">Paper</a></p></li>
-</ol>
-</dd>
-</dl>
-<dl class="py method">
-<dt id="equadratures.polytree.PolyTree.fit">
-<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree.fit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fits the tree to the provided data</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>X</strong> (<em>numpy.ndarray</em>) – Training input data</p></li>
-<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training output data</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.polytree.PolyTree.get_graphviz">
-<code class="sig-name descname">get_graphviz</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">feature_names</span></em>, <em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree.get_graphviz"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree.get_graphviz" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a url to the rendered graphviz representation of the tree.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>feature_names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – A list of the names of the features used in the training data</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.polytree.PolyTree.get_polys">
-<code class="sig-name descname">get_polys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree.get_polys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree.get_polys" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of polynomials used in the tree</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>polys</strong>: A list of Poly objects</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.polytree.PolyTree.get_splits">
-<code class="sig-name descname">get_splits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree.get_splits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree.get_splits" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the list of splits made</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>splits</strong>: A list of Splits made in the format of a nested list: [[split, dimension], …]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.polytree.PolyTree.predict">
-<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree.predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates the the polynomial tree approximation of the data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>X</strong> (<em>numpy.ndarray</em>) – An ndarray with shape (number_of_observations, dimensions) at which the tree fit must be evaluated at.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>y</strong>:
-A numpy.ndarray of shape (1, number_of_observations) corresponding to the polynomial approximation of the tree.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.polytree.PolyTree.prune">
-<code class="sig-name descname">prune</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/polytree.html#PolyTree.prune"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.polytree.PolyTree.prune" title="Permalink to this definition">¶</a></dt>
-<dd><p>Prunes the tree that you have fitted.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>X</strong> (<em>numpy.ndarray</em>) – Training input data</p></li>
-<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training output data</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 
 
@@ -370,7 +213,7 @@ A numpy.ndarray of shape (1, number_of_observations) corresponding to the polyno
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2016-2020 by Effective Quadratures.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>

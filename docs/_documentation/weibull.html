@@ -43,30 +43,9 @@
 
   
     <div class="nav-item">
-      <a href="/equadratures/"
+      <a href="/tools/"
         class="nav-link">
-          Equadratures
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/eintegrator/"
-        class="nav-link">
-          Eintegrator
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/docs/_documentation/"
-        class="nav-link">
-          Documentation
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/workshops/"
-        class="nav-link">
-          Workshops
+          Tools
       </a>
     </div>
   
@@ -111,30 +90,9 @@
 
   
     <div class="nav-item">
-      <a href="/equadratures/"
+      <a href="/tools/"
         class="nav-link">
-          Equadratures
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/eintegrator/"
-        class="nav-link">
-          Eintegrator
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/docs/_documentation/"
-        class="nav-link">
-          Documentation
-      </a>
-    </div>
-  
-    <div class="nav-item">
-      <a href="/workshops/"
-        class="nav-link">
-          Workshops
+          Tools
       </a>
     </div>
   
@@ -224,88 +182,8 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="module-equadratures.distributions.weibull">
-<span id="weibull"></span><h1>Weibull<a class="headerlink" href="#module-equadratures.distributions.weibull" title="Permalink to this headline">¶</a></h1>
-<p>The Weibull distribution.</p>
-<dl class="py class">
-<dt id="equadratures.distributions.weibull.Weibull">
-<em class="property">class </em><code class="sig-prename descclassname">equadratures.distributions.weibull.</code><code class="sig-name descname">Weibull</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shape</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/distributions/weibull.html#Weibull"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.distributions.weibull.Weibull" title="Permalink to this definition">¶</a></dt>
-<dd><p>The class defines a Weibull object. It is the child of Distribution.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>shape</strong> (<em>double</em>) – Lower bound of the support of the Weibull distribution.</p></li>
-<li><p><strong>scale</strong> (<em>double</em>) – Upper bound of the support of the Weibull distribution.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt id="equadratures.distributions.weibull.Weibull.get_cdf">
-<code class="sig-name descname">get_cdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/distributions/weibull.html#Weibull.get_cdf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.distributions.weibull.Weibull.get_cdf" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Weibull cumulative density function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#equadratures.distributions.weibull.Weibull" title="equadratures.distributions.weibull.Weibull"><em>Weibull</em></a>) – An instance of the Weibull class.</p></li>
-<li><p><strong>N</strong> (<em>integer</em>) – Number of points for defining the cumulative density function.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An array of N equidistant values over the support of the distribution.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Cumulative density values along the support of the Weibull distribution.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.distributions.weibull.Weibull.get_description">
-<code class="sig-name descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/distributions/weibull.html#Weibull.get_description"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.distributions.weibull.Weibull.get_description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A description of the Weibull distribution.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>self</strong> (<a class="reference internal" href="#equadratures.distributions.weibull.Weibull" title="equadratures.distributions.weibull.Weibull"><em>Weibull</em></a>) – An instance of the Weibull class.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A string describing the Weibull distribution.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.distributions.weibull.Weibull.get_icdf">
-<code class="sig-name descname">get_icdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xx</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/distributions/weibull.html#Weibull.get_icdf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.distributions.weibull.Weibull.get_icdf" title="Permalink to this definition">¶</a></dt>
-<dd><p>An inverse Weibull cumulative density function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#equadratures.distributions.weibull.Weibull" title="equadratures.distributions.weibull.Weibull"><em>Weibull</em></a>) – An instance of the Weibull class.</p></li>
-<li><p><strong>xx</strong> (<em>array</em>) – A numpy array of uniformly distributed samples between [0,1].</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Inverse CDF samples associated with the Weibull distribution.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="equadratures.distributions.weibull.Weibull.get_pdf">
-<code class="sig-name descname">get_pdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/equadratures/distributions/weibull.html#Weibull.get_pdf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#equadratures.distributions.weibull.Weibull.get_pdf" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Weibull probability density function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#equadratures.distributions.weibull.Weibull" title="equadratures.distributions.weibull.Weibull"><em>Weibull</em></a>) – An instance of the Weibull class.</p></li>
-<li><p><strong>N</strong> (<em>integer</em>) – Number of points for defining the probability density function.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+  <div class="section" id="weibull">
+<h1>Weibull<a class="headerlink" href="#weibull" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -315,7 +193,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2016-2020 by Effective Quadratures.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>
